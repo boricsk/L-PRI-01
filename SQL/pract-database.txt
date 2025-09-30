@@ -1,0 +1,105 @@
+CREATE DATABASE pract;
+USE pract;
+CREATE TABLE users (
+    UserID	int PRIMARY KEY AUTO_INCREMENT,
+    Username varchar(20) NOT NULL,
+    Password text NOT NULL,
+    Name varchar(100),
+    LastLogin datetime,
+    ClassID varchar(3)
+    );
+
+USE pract;
+INSERT INTO users
+VALUES
+('','test.elek', 'Káposzta', 'Teszt Elek','2025-09-04', '106'),
+('','krokod.ilus', 'Valami', 'Krokod Ilus','2025-09-06', '107');
+
+
+USE pract;
+CREATE TABLE Posts (
+	PostID INT PRIMARY KEY AUTO_INCREMENT,
+    Date Datetime NOT NULL,
+    Post text,
+    UserId int REFERENCES Users(UserID)    
+)
+CHARACTER SET utf8
+COLLATE utf8_hungarian_ci;
+
+ALTER TABLE `users` CHANGE `UserID` `UserID` INT(11) NOT NULL AUTO_INCREMENT UNIQUE;
+
+ALTER TABLE `users` ADD (Birthdate Date) 
+
+ALTER TABLE `users` MODIFY Username varchar(30) 
+
+CREATE TABLE proba (
+	id int NOT null PRIMARY KEY AUTO_INCREMENT,
+    nev varchar(40) NOT null 
+)
+CHARACTER SET utf8
+COLLATE utf8_hungarian_ci;
+
+INSERT INTO proba (
+	VALUES('', 'Kiss Péter'),
+     ('', 'Nagy Sára'),
+     ('', 'Huszar Tibor')
+)
+
+
+CREATE TABLE osztaly
+(
+	osztalykod varchar(3) NOT null PRIMARY KEY,
+    osztalynev varchar(20),
+    vezadoszam decimal(10) 
+) ENGINE = INNODB;
+
+CREATE TABLE dolgozo (
+	adoszam decimal(10) PRIMARY KEY,
+    nev varchar(30),
+    lakcim varchar(40) DEFAULT 'ismeretlen',
+    osztalykod varchar(3),  
+    FOREIGN KEY (osztalykod) REFERENCES osztaly(osztalykod)
+) ENGINE = INNODB
+
+INSERT INTO osztaly VALUES 
+	('ADO', 'Adóügyi osztály', 1234567),
+    ('MUN', 'Munkaügyi osztály', 2143657);
+    
+INSERT INTO dolgozo VALUES
+	('3216547', 'Kiss Péter', '', 'MUN'),
+    ('4321765', 'Nagy Ágnes', '', 'ADO'),
+    ('5432176', 'Horváth Éva', default, 'MUN'),
+    ('6543217', 'Tóth Gábor', NULL, 'ADO');
+
+ALTER table dolgozo DROP FOREIGN KEY dolgozo_ibfk_1;
+
+ALTER TABLE dolgozo ADD FOREIGN KEY fk_osztalykod (osztalykod) REFERENCES osztaly(osztalykod) on UPDATE CASCADE;
+
+UPDATE osztaly SET osztalykod = 'MNK' WHERE osztalykod='MUN';
+
+SELECT nev, osztalykod FROM dolgozo ORDER by nev
+
+SELECT adoszam, nev, osztaly.osztalynev, lakcim
+FROM dolgozo INNER JOIN osztaly on dolgozo.osztalykod = osztaly.osztalykod 
+ORDER by adoszam DESC
+
+SELECT adoszam, nev, osztaly.osztalynev, lakcim
+FROM dolgozo INNER JOIN osztaly on dolgozo.osztalykod = osztaly.osztalykod
+WHERE nev LIKE 'N%' OR adoszam > 5000000 OR lakcim IS null
+ORDER by osztaly.osztalynev, nev DESC
+
+
+CREATE VIEW dolglista AS
+SELECT
+	adoszam, nev, osztalynev
+FROM dolgozo d, osztaly o
+WHERE d.osztalykod = o.osztalykod
+ORDER BY nev;
+
+
+
+
+
+
+
+

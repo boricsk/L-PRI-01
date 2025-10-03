@@ -1,0 +1,27 @@
+Mi lesz az értéke a következõ C++ nyelvû kifejezésnek: 
+
+int k=11, b=2;	
+1/b + k%3;
+
+1/2 + 11%3 => 0 + 2 => 2
+
+
+A C/C++-nyelv szintaktikai és szemantikai szabályai szerint helyesek –e a következõ programrészletek? 
+	1./	int i,s=12;
+		for(i=0, i<12, ++i )
+		{ s+=i;}
+				
+	2./	float x=2, y=1, z=3;
+		cout<< ”kerem az erteket”;
+		cin<< x;
+ 
+	3./	int main
+		{
+			int j=1,i=2;
+			j=j+2;
+		}
+
+1 ./ Nem helyes, mert a for ciklusban vesszõ helyett pontosvesszõt kell használni.
+2 ./ Nem helyes, mert a cin operátor irányának megfordítása szükséges (>>).
+3 ./ Nem helyes, mert az int main után hiányzik a zárójel ().
+

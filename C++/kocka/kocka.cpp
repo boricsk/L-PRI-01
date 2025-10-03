@@ -36,38 +36,12 @@ int kocka()
 	return 0;
 }
 
-int jegy()
-{
-	int jegy[15],i,  atlag = 0, letszam = 0;
-	char betu;
 
-	do 
-	{
-		do
-		{
-			cout << "Adja meg a " << letszam + 1 << ". tanulo jegyet :";
-			cin >> jegy[letszam];
-		} while (jegy[letszam] < 1 || jegy[letszam] > 5);
-		cout << "Van még ? (y)"; cin >> betu;
-		letszam++;
-
-	} while (betu == 'y' && letszam < 15);
-	system("cls");
-
-	for (i = 0; i < letszam; i++) {
-		cout << "A(z) " << i + 1 << " tanulo jegye :" << jegy[i] << endl;
-		atlag = atlag + jegy[i];
-	}
-
-	cout << "Az atlag :" << (float)atlag / letszam << endl;
-
-	return 0;
-}
 
 int main()
 {
 	kocka();
-	jegy();
+	
 
 	return 0;
 }

@@ -1,7 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void compare()
+{
+	char nev1[15], nev2[15];
+	cout << "Kerem az elso nevet "; cin.getline(nev1, 15);
+	cout << "Kerem a masodik nevet "; cin.getline(nev2, 15);
+
+	cout << endl;
+	cout << nev1 << " " << nev2 << " " << strcmp(nev1, nev2);
+}
+
+void strings()
 {
 	int i;
 	char nev1[15], nev2[15];
@@ -26,6 +36,12 @@ int main()
 	cout << endl;
 
 	if (strcmp(nev1, nev2) == 0) { cout << "Egyformak"; }
+}
 
+int main()
+{
+
+
+	compare();
 	return 0;
 }

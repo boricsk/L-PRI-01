@@ -1,0 +1,24 @@
+id	nev	fiu	szuldatum
+1	Pék Roland	-1	2016.01.30
+2	Illin Zita	0	2016.01.31
+3	Ördögh Dániel	-1	2015.10.07
+4	Barta Ildikó	0	2016.06.20
+5	Simony Kata	0	2016.03.29
+6	Csepreg Natália	0	2015.10.31
+7	Nagy Petra	0	2015.12.15
+8	Vörös Dóra	0	2015.12.05
+9	Varga Boldizsár	-1	2015.09.10
+10	Szilágyi Réka	0	2015.10.26
+11	Helle Ágnes	0	2016.02.28
+12	Gyömbér Anna	0	2016.05.13
+13	Farkas Dária	0	2015.12.25
+14	Barta Zsuzsanna	0	2015.09.14
+15	Schiss Bence	-1	2016.06.30
+16	Szabó Attila	-1	2015.10.18
+17	Nagy Dorottya	0	2015.10.22
+18	Lengyel Lilla	0	2016.03.09
+19	Csiszár Nikolett	0	2016.08.16
+20	Kond Lili	0	2015.09.08
+21	Fehér Orsolya	0	2016.06.16
+22	Haskó Fanni	0	2016.08.03
+23	Sós Gábor	-1	2016.02.03

@@ -1,0 +1,24 @@
+Sorszám	Név	Születési év	Hó	Nap	Azonosító			Sorszám	Azonosítók	Ellenőrzés	Születési dátum
+1	Skvar Tamás	1983	7	11				1	8347566259
+2	Tatár István	2009	6	21				2	8393233704
+3	Siket Karen	1984	5	1				3	8505565134
+4	Horváth Mercédesz	1973	4	10				4	8365097672
+5	Dombovári Petra	1956	11	25				5	8513288153
+6	Rém Elek	2000	4	6				6	8390291061
+7	Kamarás Zsófia Viktória	1984	11	3				7	8486735564
+8	Sebő Tas	1963	10	19				8	8399469238
+9	Szendrődi Csaba	1970	6	15				9	8428548358
+10	Berger Péter	1979	11	24				10	8418772794
+11	Csonka Anna	1966	12	17				11	8328357240
+12	Szelei Anikó Dorina	1966	12	21				12	8357364004
+13	Kovács Ágnes	1973	11	10				13	8430408169
+14	Szőke Mátyás	1964	11	4				14	8412341600
+15	Kiss Zsófia	1974	8	31				15	8425595762
+16	Bakos Kata Judit	1976	5	15				16	8365137992
+17	Bodnár Anna Katalin	1962	2	28				17	8388159739
+18	Keszthelyi Zsolt	2005	6	2				18	8520366457
+19	Kiss Lajos	1984	3	24				19	85286734810
+20	Szabó Orsolya Virág	1981	8	28				20	8428169047
+								21	8353543036
+								22	8483307864
+								23	8377852675

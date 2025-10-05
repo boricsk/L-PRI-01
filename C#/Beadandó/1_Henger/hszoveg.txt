@@ -1,0 +1,25 @@
+﻿
+1.dia
+
+A henger
+
+2.dia
+
+Forgáshenger
+Forgáshenger: egy téglalapot megforgatunk az egyik oldalának egyenese körül
+alaplap és fedőlap: egy-egy a sugarú kör
+tengely: a két körlap középpontját összekötő egyenes 
+magasság: az alap- és fedőlap távolsága
+alkotók: azok a szakaszok, amelyek a b hosszúságú oldal forgatása során keletkeznek
+
+3.dia
+
+A forgáshenger felszíne és térfogata
+
+4.dia
+
+Hengerszerű testek
+Hengerszerű test: egy síkidomot a síkjával nem párhuzamos vektorral eltolunk 
+alaplap és fedőlap: két egybevágó, egymással párhuzamos síkidom
+alkotók: az eltolásnál egymásnak megfelelő pontokat összekötő szakaszok
+hasáb: a síkidom sokszög

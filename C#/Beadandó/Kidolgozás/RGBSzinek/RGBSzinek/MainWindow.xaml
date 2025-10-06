@@ -1,0 +1,31 @@
+﻿<Window x:Class="RGBSzinek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RGBSzinek"
+        xmlns:ViewModels="clr-namespace:RGBSzinek.ViewModel"
+        mc:Ignorable="d"
+        Title="RGB Colors" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <ViewModels:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <ToolBar Grid.Row="0">
+            <Button Margin="0" Height="64" ToolTip="Open file" Command="{Binding OpenFile}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/img/icons8-open-file-64.png" />
+                </StackPanel>
+            </Button>
+            <Separator/>
+
+        </ToolBar>
+    </Grid>
+</Window>

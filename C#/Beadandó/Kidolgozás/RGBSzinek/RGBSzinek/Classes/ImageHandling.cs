@@ -22,12 +22,51 @@ namespace RGBSzinek.Classes
             return ret;
         }
 
+        public int NumberOfLightPointNoLinq(List<Point> points)
+        {
+            int ret = 0;            
+            foreach (var point in points)
+            {
+                if (point.isLight == true) { ret++; }                
+            }
+            return ret;
+        }
+
         public (byte R, byte G, byte B) GetColor(List<Point> points, int x, int y)
         {
             (byte R, byte G, byte B) ret = (R:0, G:0, B:0);
             ret.R = points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.R).FirstOrDefault();
             ret.G = points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.G).FirstOrDefault();
             ret.B = points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.B).FirstOrDefault();
+            return ret;
+        }
+
+        public int GetSumOfDarkestPoint(List<Point> points)
+        {
+            int ret = 0;
+            ret = points.Min(p => p.sum);
+            return ret;
+        }
+        public int GetSumOfDarkestPointNoLinq(List<Point> points)
+        {            
+            int minValue = 255 * 3;
+
+            foreach (Point point in points)
+            {
+                if (point.sum < minValue) {minValue = point.sum;}
+            }
+            return minValue;
+        }
+        public int GetSumOfDarkestPoint2(List<Point> points)
+        {          
+            return points.Select(p => p.sum).Distinct().OrderBy(p => p).FirstOrDefault();           
+        }
+
+        public List<Point> GetDarkestPointRGBCode(List<Point> points)
+        {
+            List<Point> ret = new List<Point>();
+            int darkestSumValue = points.Min(p => p.sum);
+            ret = points.Where(s => s.sum == darkestSumValue).ToList();
             return ret;
         }
         public List<Point> OpenFile(string path)

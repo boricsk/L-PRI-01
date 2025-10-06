@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using RGBSzinek.Classes;
+using RGBSzinek.Model;
 using RGBSzinek.RelayCommand;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace RGBSzinek.ViewModel
 {
     internal class MainWindowViewModel : INotifyPropertyChanged
     {
+        private List<ImagePoint> _image = new List<ImagePoint>();
+
         #region PropChangedInterface
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -38,8 +41,7 @@ namespace RGBSzinek.ViewModel
             {
                 try
                 {
-                    ImageHandling i = new ImageHandling();
-                    i.OpenFile(openFile.FileName);
+                    _image = ImageHandling.OpenFile(openFile.FileName);                   
                 }
                 catch (Exception ex)
                 {

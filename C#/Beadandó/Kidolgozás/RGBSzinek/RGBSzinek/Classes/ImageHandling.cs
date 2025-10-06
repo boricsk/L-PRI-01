@@ -10,68 +10,69 @@ namespace RGBSzinek.Classes
 {
     public class ImageHandling
     {
-        public ImageHandling()
+        private List<ImagePoint> _points = new List<ImagePoint>();
+        public ImageHandling(List<ImagePoint> points)
         {
-
+            _points = points;
         }
 
-        public int NumberOfLightPoint(List<Point> points)
+        public int NumberOfLightPoint()
         {
             int ret = 0;
-            ret = points.Where(p => p.isLight == true).Count();
+            ret = _points.Where(p => p.isLight == true).Count();
             return ret;
         }
 
-        public int NumberOfLightPointNoLinq(List<Point> points)
+        public int NumberOfLightPointNoLinq()
         {
             int ret = 0;            
-            foreach (var point in points)
+            foreach (var point in _points)
             {
                 if (point.isLight == true) { ret++; }                
             }
             return ret;
         }
 
-        public (byte R, byte G, byte B) GetColor(List<Point> points, int x, int y)
+        public (byte R, byte G, byte B) GetColor(int x, int y)
         {
             (byte R, byte G, byte B) ret = (R:0, G:0, B:0);
-            ret.R = points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.R).FirstOrDefault();
-            ret.G = points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.G).FirstOrDefault();
-            ret.B = points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.B).FirstOrDefault();
+            ret.R = _points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.R).FirstOrDefault();
+            ret.G = _points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.G).FirstOrDefault();
+            ret.B = _points.Where(c => c.PointX == x && c.PointY == y).Select(p => p.B).FirstOrDefault();
             return ret;
         }
 
-        public int GetSumOfDarkestPoint(List<Point> points)
+        public int GetSumOfDarkestPoint()
         {
             int ret = 0;
-            ret = points.Min(p => p.sum);
+            ret = _points.Min(p => p.sum);
             return ret;
         }
-        public int GetSumOfDarkestPointNoLinq(List<Point> points)
+        public int GetSumOfDarkestPointNoLinq()
         {            
             int minValue = 255 * 3;
 
-            foreach (Point point in points)
+            foreach (ImagePoint point in _points)
             {
                 if (point.sum < minValue) {minValue = point.sum;}
             }
             return minValue;
         }
-        public int GetSumOfDarkestPoint2(List<Point> points)
+        public int GetSumOfDarkestPoint2()
         {          
-            return points.Select(p => p.sum).Distinct().OrderBy(p => p).FirstOrDefault();           
+            return _points.Select(p => p.sum).Distinct().OrderBy(p => p).FirstOrDefault();           
         }
 
-        public List<Point> GetDarkestPointRGBCode(List<Point> points)
+        public List<ImagePoint> GetDarkestPointRGBCode()
         {
-            List<Point> ret = new List<Point>();
-            int darkestSumValue = points.Min(p => p.sum);
-            ret = points.Where(s => s.sum == darkestSumValue).ToList();
+            List<ImagePoint> ret = new List<ImagePoint>();
+            int darkestSumValue = _points.Min(p => p.sum);
+            ret = _points.Where(s => s.sum == darkestSumValue).ToList();
             return ret;
         }
-        public List<Point> OpenFile(string path)
+        public static List<ImagePoint> OpenFile(string path)
         {
-            List<Point> ret = new List<Point>();
+            List<ImagePoint> ret = new List<ImagePoint>();
             if (File.Exists(path))
             {
                 int posY = 0;
@@ -81,7 +82,7 @@ namespace RGBSzinek.Classes
                     int posX = 0;
                     for (int i = 2; i < parts.Length; i = i + 3)
                     {
-                        Point currentPoint = new Point();
+                        ImagePoint currentPoint = new ImagePoint();
                         currentPoint.R = byte.Parse(parts[i - 2]);
                         currentPoint.G = byte.Parse(parts[i - 1]);
                         currentPoint.B = byte.Parse(parts[i]);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RGBSzinek.Model
 {
-    public class Point
+    public class ImagePoint
     {
         public int sum => R + G + B;
         public int avg => sum / 3;

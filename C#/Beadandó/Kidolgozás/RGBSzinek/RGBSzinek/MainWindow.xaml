@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:RGBSzinek"
         xmlns:ViewModels="clr-namespace:RGBSzinek.ViewModel"
         mc:Ignorable="d"
-        Title="RGB Colors" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="RGB Colors" Height="640" Width="800" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <ViewModels:MainWindowViewModel/>
     </Window.DataContext>
@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            
+
         </Grid.ColumnDefinitions>
         <ToolBar Grid.Row="0">
             <Button Margin="0" Height="64" ToolTip="Open file" Command="{Binding OpenFile}">
@@ -27,5 +27,15 @@
             <Separator/>
 
         </ToolBar>
+        <Image HorizontalAlignment="Left" Height="360" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="640" Source="{Binding LoadedImage}"/>
+        <Button Command="{Binding GrabColor}" Content="Grab color" HorizontalAlignment="Left" Margin="10,497,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.315,-0.299" Width="82"/>
+        <TextBox HorizontalAlignment="Left" Margin="32,375,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding XCoord}" VerticalAlignment="Top" Width="60"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="10,371,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="10,402,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="32,406,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding YCoord}" VerticalAlignment="Top" Width="60"/>
+        <Label Content="{Binding RGBColorCode}" HorizontalAlignment="Left" Margin="10,428,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Command="{Binding CountLightPixel}" Content="Count light pixel" HorizontalAlignment="Left" Margin="115,497,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.315,-0.299" Width="115"/>
+        <ListBox Grid.Row="1" ItemsSource="{Binding DarkestPointsRgbCode}" Margin="250,375,425,52"/>
+        <Button Command="{Binding GetDarkestPixels}" Content="Get darkest pixels" HorizontalAlignment="Left" Margin="250,497,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.315,-0.299" Width="125"/>
     </Grid>
 </Window>

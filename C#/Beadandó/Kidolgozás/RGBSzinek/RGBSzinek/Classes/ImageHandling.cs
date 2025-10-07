@@ -27,7 +27,7 @@ namespace RGBSzinek.Classes
             {
                 _pixelMap.TryGetValue((x, lineNum), out ImagePoint p0);
                 _pixelMap.TryGetValue((x - 1, lineNum), out ImagePoint p1);
-                if ((p0.B - p1.B) > Math.Abs(deviation))
+                if (Math.Abs(p0.B - p1.B) > deviation)
                 {
                     return true;
                 }

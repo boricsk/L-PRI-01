@@ -55,13 +55,6 @@ namespace RGBSzinek.ViewModel
             set { _yCoord = value; OnPropertyChanged(); }
         }
 
-        private string _RGBColorCode;
-        public string RGBColorCode
-        {
-            get => _RGBColorCode;
-            set { _RGBColorCode = value; OnPropertyChanged(); }
-        }
-
         private ObservableCollection<string> _darkestPointsRgbCode;
         public ObservableCollection<string> DarkestPointsRgbCode
         {
@@ -122,9 +115,9 @@ namespace RGBSzinek.ViewModel
 
         public ICommand GrabColor => new ProjectRealyCommand(_ => GrabbingColor());
         private void GrabbingColor()
-        {            
-            _RGBColorCode = $"RGB {_imageHandling.GetColor(int.Parse(_xCoord), int.Parse(_yCoord))}";
-            OnPropertyChanged(nameof(RGBColorCode));
+        {
+            MessageBox.Show($"RGB {_imageHandling.GetColor(int.Parse(_xCoord), int.Parse(_yCoord))}.", "Grab color", MessageBoxButton.OK, MessageBoxImage.Information); 
+            
         }
 
         public ICommand OpenFile => new ProjectRealyCommand(_ => OpeningFile());

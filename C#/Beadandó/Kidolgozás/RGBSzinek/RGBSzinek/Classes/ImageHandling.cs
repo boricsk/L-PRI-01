@@ -22,12 +22,12 @@ namespace RGBSzinek.Classes
         }
 
         public bool CheckBlueDeviations(int deviation, int lineNum)
-        {            
+        {
             for (int x = 1; x < _width; x++)
             {
                 _pixelMap.TryGetValue((x, lineNum), out ImagePoint p0);
                 _pixelMap.TryGetValue((x - 1, lineNum), out ImagePoint p1);
-                if ((p0.B - p1.B) > Math.Abs(deviation) )
+                if ((p0.B - p1.B) > Math.Abs(deviation))
                 {
                     return true;
                 }
@@ -40,10 +40,7 @@ namespace RGBSzinek.Classes
             List<int> lines = new List<int>();
             for (int y = 0; y < _height; y++)
             {
-                for (int x = 0; x < _width; x++)
-                {
-                    if (CheckBlueDeviations(10, y) && !lines.Contains(y)) { lines.Add(y); }
-                }
+                if (CheckBlueDeviations(10, y))  { lines.Add(y); }
             }
             ret = $"Upper line : {lines.Min()}, Bottom line : {lines.Max()}";
             return ret;

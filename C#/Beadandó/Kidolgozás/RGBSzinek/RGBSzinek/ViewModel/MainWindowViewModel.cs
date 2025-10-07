@@ -107,6 +107,19 @@ namespace RGBSzinek.ViewModel
             }
         }
 
+        public ICommand GetBorders => new ProjectRealyCommand(_ => GettingBorders());
+        private void GettingBorders()
+        {
+            if (_imageHandling != null)
+            {
+                MessageBox.Show($"Borders are {_imageHandling.GetCloudBorders()} .", "Borders", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show($"No picture loaded...", "Light pixels", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         public ICommand GrabColor => new ProjectRealyCommand(_ => GrabbingColor());
         private void GrabbingColor()
         {            

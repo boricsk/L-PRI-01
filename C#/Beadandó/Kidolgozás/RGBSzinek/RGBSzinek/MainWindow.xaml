@@ -37,5 +37,6 @@
         <Button Command="{Binding CountLightPixel}" Content="Count light pixel" HorizontalAlignment="Left" Margin="115,497,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.315,-0.299" Width="115"/>
         <ListBox Grid.Row="1" ItemsSource="{Binding DarkestPointsRgbCode}" Margin="250,375,425,52"/>
         <Button Command="{Binding GetDarkestPixels}" Content="Get darkest pixels" HorizontalAlignment="Left" Margin="250,497,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.315,-0.299" Width="125"/>
+        <Button Command="{Binding GetBorders}" Content="Get Cloud Borders" HorizontalAlignment="Left" Margin="400,497,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.315,-0.299" Width="125"/>
     </Grid>
 </Window>

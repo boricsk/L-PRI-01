@@ -152,6 +152,10 @@ void ertekel()
 	else { cout << "Bukta" << endl; }
 }
 
+//Egy csoportba max 15-en járhatnak. Kérjük be egyenként a csoport mat jegyeit(1-5)  
+//és tároljuk egy JEGY[] tömbben! Minden bekérés után kérdezzük meg van-e még adat (Y)?!
+// Írassuk ki táblázatos formában a jegyeket egy új ciklussal
+// és számítsuk ki a csoport átlagát! 
 int jegy()
 {
 	int jegy[15], i, atlag = 0, letszam = 0;
@@ -196,12 +200,59 @@ void switchcase()
 		break;
 	}
 }
+/* FELADAT 1
+// Töltsünk fel egy max. 15 elemû tömböt ellenõrzötten (0-100) majd
+// írassuk ki az elemeket táblázatosan. Keressük meg a max elem indexét, értékét!
+//cseréljük meg a tömbben a max elemet az elsõ elemmel
+// Írassuk ki újra a tömböt!
+*/
+
+void feladat1()
+{
+	int tomb[15], maxindex = 0, i, db, maxIndex = 0, max = 0, seged;
+
+	do
+	{
+		cout << "Kerem a tomb elemszamat :"; cin >> db; cout << endl;
+	} while (db < 1 || db > 15);
+
+	for (i = 0; i < db; i++) {
+		do
+		{
+			cout << "Kerem a tomb " << i + 1 << ". elemet "; cin >> tomb[i]; cout << endl;
+		} while (tomb[i] < 0 || tomb[i] > 100);
+	}
+
+	cout << endl << "Kiiratas" << endl;
+	for (i = 0; i < db; i++) {
+		cout << "A(z) " << i + 1 << ". elem :" << tomb[i] << endl;
+	}
+
+	cout << endl << "Max index" << endl;
+	for (i = 0; i < db; i++) {
+		if (tomb[i] > max) { max = tomb[i]; maxindex = i; }
+	}
+	cout << "A legnagyobb szam index : " << maxindex << endl;
+
+	cout << "0 es a max elem csereje" << endl;
+	seged = tomb[0];
+	tomb[0] = tomb[maxindex];
+	tomb[maxindex] = seged;
+
+	for (i = 0; i < db; i++) {
+		cout << "A(z) " << i + 1 << ". elem :" << tomb[i] << endl;
+	}
+}
+
+
+
+
 
 int main() {
 	//practice();
 	//test();
 	//osszead();
 	//osszead2();
-	switchcase();
+	feladat1();
 	return 0;
 }

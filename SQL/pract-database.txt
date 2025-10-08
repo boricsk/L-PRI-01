@@ -96,8 +96,21 @@ FROM dolgozo d, osztaly o
 WHERE d.osztalykod = o.osztalykod
 ORDER BY nev;
 
+CREATE INDEX idx_name on dolgozo(nev);
+
+use gyak_db1;
+CREATE TABLE countries (
+	CountryID	varchar(2) NOT NULL PRIMARY KEY,
+    CountryName	varchar(40) NOT NULL,
+    Continrnt	varchar(20) NULL DEFAULT 'Europe'
+);
 
 
+INSERT INTO countries(CountryName,CountryID) VALUES
+('Szlovakia', 'SK');
+
+INSERT INTO countries VALUES('HU', 'Hungary', default );
+INSERT INTO countries VALUES('HU', 'Hungary' ); -> MySQL-ben nem jó!!
 
 
 

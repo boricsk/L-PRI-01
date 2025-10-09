@@ -2,6 +2,10 @@
 #include <ctime>
 
 using namespace std;
+// Kockával dobunk 1000-szor(1-6) töltsük az egyes dobások eredményét a kocka[] tömbbe.
+// Az egyes dobások eredményét véletlengenerátorral adjuk meg!
+// Számoljuk meg hogy az egyes dobásokból hány db volt ( MEGSZÁMLÁLÁS tétele) és írassuk ki!
+// számoljuk meg hány db páros dobás volt!
 
 int kocka()
 {

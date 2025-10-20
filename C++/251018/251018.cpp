@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-
+//#include "kosarasok.cpp"
 
 using namespace std;
 
@@ -22,11 +22,12 @@ struct tanulo
 void bevitel();
 void tablazatosKiiras();
 void tanulok();
+void kmain();
 
 
 int main()
 {
-	tanulok();
+	kmain();
 	return 0;
 }
 

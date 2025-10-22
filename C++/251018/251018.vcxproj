@@ -124,7 +124,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="251018.cpp" />
+    <ClCompile Include="kob.cpp" />
     <ClCompile Include="kosarasok.cpp" />
+    <ClCompile Include="prim-fakt.cpp" />
+    <ClCompile Include="reference.cpp" />
+    <ClCompile Include="reference_2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -45,7 +45,7 @@ void kmain()
 		cout << "Kerem a(z) " << i + 1 << " jatekos nevet ";
 		cin >> csapat[i].nev;
 		csapat[i].pont = rand() % 101;
-		csapat[i].mag = rand() % (220 - 170) + 170;
+		csapat[i].mag = (rand() % (220 - 170)) + 170; //170 és 220 közötti érték képzés 
 	}
 
 	kiirat(csapat, letszam);

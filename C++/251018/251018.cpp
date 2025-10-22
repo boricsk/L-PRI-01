@@ -23,6 +23,10 @@ void bevitel();
 void tablazatosKiiras();
 void tanulok();
 void kmain();
+void prim_fakt_main();
+void reference_main();
+void reference2_main();
+
 
 
 int main()

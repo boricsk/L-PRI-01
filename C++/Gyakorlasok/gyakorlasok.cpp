@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -207,7 +208,7 @@ void switchcase()
 // Írassuk ki újra a tömböt!
 */
 
-void feladat1()
+void feladat5_1()
 {
 	int tomb[15], maxindex = 0, i, db, maxIndex = 0, max = 0, seged;
 
@@ -244,15 +245,76 @@ void feladat1()
 	}
 }
 
+//Egy csoportba max 15-en járhatnak. Kérjük be egyenként a csoport mat jegyeit(1-5)  
+//és tároljuk egy JEGY[] tömbben! Minden bekérés után kérdezzük meg van-e még adat (Y)?!
+// Írassuk ki táblázatos formában a jegyeket egy új ciklussal
+// és számítsuk ki a csoport átlagát! 
 
+void feladat5_2()
+{
+	int jegy[15], letszam = 0;
+	char betu;
+	do
+	{
+		do
+		{
+			cout << " Kerem a " << letszam + 1 << " tanulo jegyet "; cin >> jegy[letszam];
+		} while (jegy[letszam] < 1 || jegy[letszam] > 5);
 
+		cout << "Van meg adat? "; cin >> betu;
+		letszam++;
+	} while (betu == 'y' && letszam < 15);
 
+	system("cls");
+
+	for (int i = 0; i < letszam; i++)
+	{
+		cout << "A(z) " << letszam + 1 << " tanulo jegye : \t" << jegy[i] << endl;
+	}
+}
+
+// Kockával dobunk 1000-szor(1-6) töltsük az egyes dobások eredményét a kocka[] tömbbe.
+// Az egyes dobások eredményét véletlengenerátorral adjuk meg!
+// Számoljuk meg hogy az egyes dobásokból hány db volt ( MEGSZÁMLÁLÁS tétele) és írassuk ki!
+// számoljuk meg hány db páros dobás volt!
+
+void feladat5_3()
+{
+	int kocka[1000], tar[6] = { 0 }, dbparos = 0, i;
+	srand((unsigned int)time(NULL));
+	for (i = 0; i < 1000; i++)
+	{
+		kocka[i] = (rand() % 6) + 1;
+		cout << kocka[i] << " ";
+	}
+
+	for (i = 0; i < 1000; i++)
+	{
+		switch (kocka[i])
+		{
+		case 1: { tar[0]++; break; }
+		case 2: { tar[1]++; break; }
+		case 3: { tar[2]++; break; }
+		case 4: { tar[3]++; break; }
+		case 5: { tar[4]++; break; }
+		case 6: { tar[5]++; break; }
+		}
+		if (kocka[i] % 2 == 0) { dbparos++; }
+	}
+	cout << endl;
+	for (i = 0; i < 6; i++)
+	{
+		cout << "A(z) " << i + 1 << " dobasok szama : \t" << tar[i] << endl;
+	}
+	cout << "A paros dobasok szama : " << dbparos << endl;
+	cout << "A paratlan dobasok szama : " << 1000 - dbparos << endl;
+}
 
 int main() {
 	//practice();
 	//test();
 	//osszead();
 	//osszead2();
-	feladat1();
+	feladat5_3();
 	return 0;
 }

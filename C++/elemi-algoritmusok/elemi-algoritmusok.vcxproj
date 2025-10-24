@@ -123,7 +123,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="eldontes.cpp" />
+    <ClCompile Include="kivalasztas.cpp" />
+    <ClCompile Include="kivalogatas.cpp" />
+    <ClCompile Include="lin-kereses.cpp" />
+    <ClCompile Include="log-kereses.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="megszamlalas.cpp" />
+    <ClCompile Include="min_max_kivalasztas.cpp" />
+    <ClCompile Include="osszegzes.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

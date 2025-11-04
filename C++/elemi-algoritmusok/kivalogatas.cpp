@@ -20,7 +20,7 @@ int tomb2[15] = { 1,34,56,4,57,45,67,6,43,32,33,99,33,100,1 };
 
 void kivalogatas()
 {
-	cout << "Kivalogatas. Mennyi 4-es vagy jobb (75-nél nagyobb) van?" << endl;
+	cout << "Kivalogatas. Mennyi 4-es vagy jobb (75-nel nagyobb) van?" << endl;
 	int segedIndex = 0, seged[15];
 	int i = 0;
 	for (i = 0; i < 15; i++)

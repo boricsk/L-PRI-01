@@ -31,7 +31,7 @@ void reference2_main();
 
 int main()
 {
-	kmain();
+	tanulok();
 	return 0;
 }
 

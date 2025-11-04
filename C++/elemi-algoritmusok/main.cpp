@@ -14,6 +14,6 @@ void log_kereses();
 
 int main()
 {
-	log_kereses();
+	min_max_kivalasztas();
 	return 0;
 }

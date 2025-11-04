@@ -13,7 +13,7 @@ Algoritmus vége
 #include <iostream>
 using namespace std;
 
-int tomb5[15] = { 1,34,56,4,57,45,67,6,43,32,33,99,33,100,1 };
+int tomb5[15] = { 10,34,56,4,57,45,67,6,43,32,33,99,33,100,21 };
 
 void min_max_kivalasztas()
 {	

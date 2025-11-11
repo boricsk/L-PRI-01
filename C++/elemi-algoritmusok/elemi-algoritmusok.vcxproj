@@ -130,6 +130,7 @@
     <ClCompile Include="log-kereses.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="megszamlalas.cpp" />
+    <ClCompile Include="metszetkepzes.cpp" />
     <ClCompile Include="min_max_kivalasztas.cpp" />
     <ClCompile Include="osszegzes.cpp" />
   </ItemGroup>

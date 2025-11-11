@@ -10,10 +10,11 @@ void lin_keres();
 void kivalogatas();
 void kivalasztas();
 void log_kereses();
+void metszetkepzes();
 
 
 int main()
 {
-	min_max_kivalasztas();
+	metszetkepzes();
 	return 0;
 }

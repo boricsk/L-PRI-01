@@ -7,9 +7,11 @@ int konz7_feladat3();
 int konz7_feladat4();
 int zh_elok();
 void elm_main();
+int konz7_feladat5();
 
 
 int main() {	
-	elm_main();
+	//elm_main();
+	konz7_feladat5();
 	return 0;
 }

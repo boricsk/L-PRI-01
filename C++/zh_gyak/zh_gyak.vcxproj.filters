@@ -33,5 +33,11 @@
     <ClCompile Include="zh_elok.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="elmelet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="7konz_feladat_5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

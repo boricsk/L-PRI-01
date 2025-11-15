@@ -14,11 +14,23 @@ void elm_feladat_10();
 void elm_feladat_11();
 void elm_feladat_12();
 void elm_feladat_13();
+void elm_feladat_14();
+void elm_feladat_15();
+void elm_feladat_16();
+void elm_feladat_17();
+void elm_feladat_18();
+void elm_feladat_19();
+void elm_feladat_20();
+void elm_feladat_21();
+void elm_feladat_22();
+void elm_feladat_23();
+void elm_feladat_24();
+void elm_feladat_25();
 
 
 void elm_main()
 {
-	elm_feladat_13();
+	elm_feladat_25();
 }
 
 // Hányszor fut le a lenti ciklus?
@@ -242,3 +254,122 @@ g, az 1 a jó						//---------------	2pont
 
 A válaszom : g
 */
+
+//Hányszor fut le a ciklus?
+void elm_feladat_14()
+{
+	int i = 1;
+	while (i < 3) { i++; cout << "X"; }
+	
+	//2x
+}
+
+//Mi lesz az értéke a kifejezésnek?
+void elm_feladat_15()
+{
+	int k = 4, b = 2;
+	cout << 2 / k + b % 3;
+	//0 + 2 = > 2
+}
+
+//Mi lesz az értéke a kifejezésnek?
+void elm_feladat_16()
+{
+	int a = 2, b = 6;
+	cout << a % 2 + b % 3;
+	//0 + 0 = > 0
+}
+
+//Mit ír ki?
+void elm_feladat_17()
+{
+	int Tomb[2][3] = { 1,1,2,3,4 };
+	cout << Tomb[1][1];
+	//4
+}
+
+//Mi lesz az x értéke?
+void elm_feladat_18()
+{
+	int x = 1, i;
+	for (i = 0; i < 4; i++)
+	{		
+		x = x + 1;
+		if (i == 2) break;
+	}
+	cout << x;
+	//4
+}
+
+//Adjon meg egy C++ kiejezéstamely akkor igaz, ha x változó 10 nél kisebb páratlan egész
+void elm_feladat_19()
+{
+	int x = -2;
+	if (x < 10 && x % 2 != 0) { cout << "T"; }
+	else { cout << "F"; }
+}
+
+//Írjon egy olyan kifejezést C++ nyelven: ami akkor igaz, ha G egész szám kívül esik, a 25 és 35 zárt intervallumon!
+void elm_feladat_20()
+{
+	int G = 25;
+	if (G < 25 || G > 35) { cout << "T"; }
+	else { cout << "F"; }
+}
+
+//Mennyi lesz az i ciklusváltozó és az x változó értéke a ciklus lefutása után?
+void elm_feladat_21()
+{
+	int x = 2, i;
+	for (i = 0; i < 1; i++)
+	{
+		x = x + 1;
+	}
+	cout << i << " " << x;
+	//i 1 x 3
+}
+
+//A char szoveg[15]=”SAMUKA” értékadás után mennyi lesz a szoveg[3] értéke?
+void elm_feladat_22()
+{
+	char szoveg[15] = "SAMUKA";
+	cout << szoveg[3];
+	//U
+}
+
+//Mit ír ki?
+void elm_feladat_23()
+{
+	int b = 10, z[3] = { 2,4,3 };
+	switch (z[2])
+	{
+	case 1:b = b + 5; break;
+	case 3:b = b + 10;
+	case 5:b = b + 15;
+	}
+	cout << b; //35
+}
+
+//Mit ír ki?
+void elm_feladat_24()
+{
+	int valt = 10;					//sima int 10 értékkel
+	int* m;							//egy ponter ami int-re fog majd mutatni
+	m = &valt;						//m (pointer) értéke legyen az a memóriacím, ami a valt-ra mutat
+	valt = *m * valt;				//valt legyen egyenlõ az m pointerben tárolt címre mutató érték szorozva valt-ban lévõ értékkel
+	cout << valt << "\t" << *m;		//100 100 mert a valt erteke változott a szorzással
+}
+
+//Mit ír ki?
+int FGV(int, int);
+
+int FGV(int x, int y)
+{
+	return 2 * y / x;
+}
+
+void elm_feladat_25()
+{
+	float sz1 = 3.5, sz2 = 4;
+	cout << FGV(sz1, sz2); // 2 * 4 / 3 => 2 az int miatt nem 2.6 
+}

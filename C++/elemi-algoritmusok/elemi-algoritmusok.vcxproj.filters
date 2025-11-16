@@ -45,5 +45,11 @@
     <ClCompile Include="metszetkepzes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="uniokepzes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rend_kozvetlen_kivalasztas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -11,10 +11,12 @@ void kivalogatas();
 void kivalasztas();
 void log_kereses();
 void metszetkepzes();
+void uniokepzes();
+void rend_kozv_kiv();
 
 
 int main()
 {
-	metszetkepzes();
+	rend_kozv_kiv();
 	return 0;
 }

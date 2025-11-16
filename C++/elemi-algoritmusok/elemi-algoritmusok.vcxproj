@@ -133,6 +133,8 @@
     <ClCompile Include="metszetkepzes.cpp" />
     <ClCompile Include="min_max_kivalasztas.cpp" />
     <ClCompile Include="osszegzes.cpp" />
+    <ClCompile Include="rend_kozvetlen_kivalasztas.cpp" />
+    <ClCompile Include="uniokepzes.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

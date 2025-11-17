@@ -10,10 +10,11 @@ int ReadTextFile();
 int UgynokMain();
 int Feladat2Main();
 int KeziMain();
+void bin_file_handling_main();
 
 int main()
 {
-    KeziMain();
+    bin_file_handling_main();
 }
 
 void CreateTextFile()

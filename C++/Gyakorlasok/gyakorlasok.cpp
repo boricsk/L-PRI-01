@@ -1,5 +1,8 @@
 #include <iostream>
 #include <ctime>
+#include <fstream>
+#include <string>
+
 
 using namespace std;
 
@@ -310,11 +313,29 @@ void feladat5_3()
 	cout << "A paratlan dobasok szama : " << 1000 - dbparos << endl;
 }
 
+void fileio_read()
+{
+	string szo;
+	string sor;
+	char betu;
+	ifstream be("gyakorlatok.txt");
+	if (be.fail()) { cout << "Hiba!"; }
+
+	while (!be.eof())
+	{
+		//be >> szo; // beolvasás szavanként, spaceig olvas
+		//betu = be.get(); //beolvasas karakterenként
+		getline(be, sor);
+		cout <<sor << endl; 
+	}
+	be.close();
+}
+
 int main() {
 	//practice();
 	//test();
 	//osszead();
 	//osszead2();
-	feladat5_3();
+	fileio_read();
 	return 0;
 }

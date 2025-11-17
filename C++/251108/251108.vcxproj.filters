@@ -27,5 +27,8 @@
     <ClCompile Include="kezilabda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bin_filekezeles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

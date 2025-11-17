@@ -31,7 +31,7 @@ int UgynokMain()
 	}
 	db = i;
 	cout << "Az ugynok " << i << " varosban volt." << endl;
-
+	
 	//Hány kilómétert utazott az ugynok
 	int km = 0;
 	for (j = 0; j < db; j++)

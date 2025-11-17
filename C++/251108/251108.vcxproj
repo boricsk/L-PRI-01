@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="251108.cpp" />
+    <ClCompile Include="bin_filekezeles.cpp" />
     <ClCompile Include="feladat_2.cpp" />
     <ClCompile Include="kezilabda.cpp" />
     <ClCompile Include="ugynok.cpp" />

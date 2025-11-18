@@ -18,7 +18,7 @@
     <ClCompile Include="gyakorlasok.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="helsinki.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

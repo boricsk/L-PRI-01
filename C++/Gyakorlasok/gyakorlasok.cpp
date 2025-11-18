@@ -331,11 +331,14 @@ void fileio_read()
 	be.close();
 }
 
+
+void helsinki_main();
+
 int main() {
 	//practice();
 	//test();
 	//osszead();
 	//osszead2();
-	fileio_read();
+	helsinki_main();
 	return 0;
 }

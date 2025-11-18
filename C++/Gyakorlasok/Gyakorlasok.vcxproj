@@ -124,7 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="gyakorlasok.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="helsinki.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="gyakorlatok.txt" />

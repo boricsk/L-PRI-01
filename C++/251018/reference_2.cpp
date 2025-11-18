@@ -11,7 +11,7 @@ void pointer_type();
 void pointer_type()
 {
 	int len = 15;
-	int *len_pointer;		//Pointer dekl. 
+	int *len_pointer;		//Pointer dekl. * => indirekciós operátor
 	len_pointer = &len;		//A pointerben a len memóriacíme van
 	*len_pointer = 13;		// a len értéke 13
 }

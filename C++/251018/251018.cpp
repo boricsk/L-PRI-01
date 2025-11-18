@@ -26,12 +26,13 @@ void kmain();
 void prim_fakt_main();
 void reference_main();
 void reference2_main();
+void ref_3_main();
 
 
 
 int main()
 {
-	tanulok();
+	ref_3_main();
 	return 0;
 }
 

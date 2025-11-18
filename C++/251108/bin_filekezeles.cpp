@@ -25,7 +25,7 @@ void bin_file_write()
 {
 	ofstream ki("osztaly.dat", ios::binary);
 	tanulo x;
-	if (ki.fail()) { cout << "Hiab"; exit(1); }
+	if (ki.fail()) { cout << "Hiba"; exit(1); }
 
 	for (int i = 0; i < 5; i++)
 	{

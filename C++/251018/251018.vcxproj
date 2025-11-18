@@ -129,6 +129,7 @@
     <ClCompile Include="prim-fakt.cpp" />
     <ClCompile Include="reference.cpp" />
     <ClCompile Include="reference_2.cpp" />
+    <ClCompile Include="reference_3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

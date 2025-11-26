@@ -76,24 +76,59 @@ struct helsinki
 
 int beolvas(string filenev, helsinki* tomb, int db);
 int pontszerzok(string filenev);
+void ermek(helsinki* tmb, int sorszam);
 
 void helsinki_main()
 {
-	string file = "Helsinki.txt";
+	string file = "Helsiniki.txt";
 	int helyezes_szam = pontszerzok(file);
 	cout << "A helyezes szam " << helyezes_szam << endl;
+	helsinki* tmb;
+	tmb = new helsinki[helyezes_szam];
+	beolvas(file, tmb, helyezes_szam);
+	ermek(tmb, helyezes_szam);
+}
+
+void ermek(helsinki* tmb, int sorszam)
+{
+	int arany = 0;
+	int ezust = 0;
+	int bronz = 0;
+	int ermek[4] = { 0 };
+
+	for (int i = 0; i < sorszam; i++)
+	{
+		//if (tmb[i].helyezes == 1) { arany++; }
+		//if (tmb[i].helyezes == 2) { ezust++; }
+		//if (tmb[i].helyezes == 3) { bronz++; }
+		//vagy
+		if (tmb[i].helyezes < 4) { ermek[tmb[i].helyezes - 1]++; }
+		else { ermek[3]++; }
+		//vagy
+		//switch (tmb[i].helyezes)
+		//{
+		//case 1: { arany++; break; }
+		//case 2: { ezust++; break; }
+		//case 3: { bronz++; break; }
+		//}
+	}
+	cout << "Erme statisztika" << endl;
+	cout << "Arany ermek szama : " << ermek[0] << endl;
+	cout << "Ezust ermek szama : " << ermek[1] << endl;
+	cout << "Bronz ermek szama : " << ermek[2] << endl;
+	cout << "Az osszes ermek szama : " << ermek[0] + ermek[1] + ermek[2] << endl;
+	cout << "A dobogo nelkuli helyezesek szama : " << ermek[3] << endl;
 }
 
 int pontszerzok(string filenev)
 {
 	ifstream be(filenev);
 	string seged;
+	if (be.fail()) { cout << "Olvasasi hiba!"; exit(1); }
 	int i = 0;
-
 	while (!be.eof())
 	{
 		getline(be, seged);
-		cout << seged << endl;
 		i++;
 	}
 	be.close();
@@ -108,14 +143,26 @@ int beolvas(string filenev, helsinki* tomb, int db)
 	int i = 0; 
 	while (!be.eof())
 	{
-		getline(be, seged, ' ');
-		tomb[i].helyezes = stoi(seged);
+		getline(be, seged);
+		int pos1 = seged.find(' ');
+		int pos2 = seged.find(' ', pos1 + 1);
+		int pos3 = seged.find(' ', pos2 + 1);
+		tomb[i].helyezes = stoi(seged.substr(0, pos1));
+		tomb[i].sportolok_szama = stoi(seged.substr(pos1 + 1, pos2 - pos1 - 1));
+		tomb[i].sportag = seged.substr(pos2 + 1, pos3 - pos2 - 1);
+		tomb[i].versenynev = seged.substr(pos3 + 1);
 		
-		getline(be, seged, ' ');
-		tomb[i].sportolok_szama = stoi(seged);
-
-		getline(be, tomb[i].sportag, ' ');
-		getline(be, tomb[i].versenynev, ' ');
+		
+		//cout << tomb[i].helyezes << " " << tomb[i].sportolok_szama << " " << tomb[i].versenynev << " " << tomb[i].sportag << endl;
+		////tomb[i].helyezes = stoi(seged);
+		//cout << seged << endl;
+		//getline(be, seged,' ');
+		////tomb[i].sportolok_szama = stoi(seged);
+		//cout << seged << endl;
+		//getline(be, tomb[i].sportag, ' ');
+		//cout << seged << endl;
+		//getline(be, tomb[i].versenynev, ' ');
+		//cout << seged << endl;
 
 		i++;
 	}

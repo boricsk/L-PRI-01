@@ -1,4 +1,4 @@
-1 1 atletika kalapacsvetes	
+1 1 atletika kalapacsvetes
 1 1 uszas 400m_gyorsuszas
 1 1 birkozas kotott_fogas_legsuly
 1 1 torna talajtorna
@@ -51,12 +51,12 @@
 5 1 uszas 100m_gyors
 5 1 atletika diszkoszvetes
 5 1 vivas parbajtor_egyeni
-5 2 kajak–kenu kenu_kettes_1000m
+5 2 kajak kenu kenu_kettes_1000m
 5 2 kerekparozas ketuleses_verseny
-5 4 uszas 4×200m_gyorsvalto
+5 4 uszas 4 200m_gyorsvalto
 5 5 vivas parbajtor_csapat
 6 1 birkozas kotottfogas_legsuly
-6 1 kajak–kenu kajak_egyes_500m
+6 1 kajak kenu kajak_egyes_500m
 6 1 torna osszetett_egyeni
 6 1 kerekparozas repuloverseny
 6 1 uszas 400m_gyors

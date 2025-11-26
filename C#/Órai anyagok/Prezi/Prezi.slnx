@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="CharTagjai/CharTagjai.csproj" />
+  <Project Path="DateAndTime/DateAndTime.csproj" />
+  <Project Path="DobasSwitch/DobasSwitch.csproj" />
+  <Project Path="Haromszog/Haromszog.csproj" />
+  <Project Path="Kor/Kor.csproj" />
+  <Project Path="ObjectMetodusok/ObjectMetodusok.csproj" />
+  <Project Path="Szamla/Szamla.csproj" />
+  <Project Path="Szinezes/Szinezes.csproj" />
+  <Project Path="ValtozoTartomanyok/ValtozoTartomanyok.csproj" />
+</Solution>

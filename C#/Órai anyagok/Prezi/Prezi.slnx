@@ -1,10 +1,16 @@
 <Solution>
+  <Project Path="BoxingAndUnboxing/BoxingAndUnboxing.csproj" Id="6d9b90d2-0922-4f48-b090-b41be429b9f0" />
   <Project Path="CharTagjai/CharTagjai.csproj" />
   <Project Path="DateAndTime/DateAndTime.csproj" />
   <Project Path="DobasSwitch/DobasSwitch.csproj" />
+  <Project Path="Ertektipusok/Ertektipusok.csproj" Id="2c509497-847b-42bb-b13a-6ea5243a392f" />
+  <Project Path="Felsorolas/Felsorolas.csproj" Id="ba3beb21-f453-437c-b4b8-e50e7090e49d" />
   <Project Path="Haromszog/Haromszog.csproj" />
   <Project Path="Kor/Kor.csproj" />
+  <Project Path="NullazhatoTipusok/NullazhatoTipusok.csproj" Id="0895a217-9729-4229-ae80-6e72eec78e52" />
   <Project Path="ObjectMetodusok/ObjectMetodusok.csproj" />
+  <Project Path="Referenciatipusok/Referenciatipusok.csproj" Id="3abc2465-1eb2-4c2d-acf6-ce9d2453aa1c" />
+  <Project Path="Stringek/Stringek.csproj" Id="c89ccfe6-374e-4a18-bb44-e43fb2ce5fb4" />
   <Project Path="Szamla/Szamla.csproj" />
   <Project Path="Szinezes/Szinezes.csproj" />
   <Project Path="ValtozoTartomanyok/ValtozoTartomanyok.csproj" />

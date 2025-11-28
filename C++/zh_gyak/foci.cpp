@@ -66,7 +66,8 @@ void foci()
 		be >> csapat[i].csapat1gol >> csapat[i].csapat2gol >> csapat[i].csapat1nev >> csapat[i].csapat2nev;
 		if (csapat[i].csapat1gol > csapat[i].csapat2gol) { otthoniGyozelemDb++; }
 		if (csapat[i].csapat1gol == csapat[i].csapat2gol) { dontetlenDb++; }
-		if (csapat[i].csapat1nev == "ute" || csapat[i].csapat2nev == "ute") { uteGolok++; }
+		if (csapat[i].csapat1nev == "ute") { uteGolok += csapat[i].csapat1gol; }
+		if (csapat[i].csapat2nev == "ute") { uteGolok += csapat[i].csapat2gol; }
 		
 		csapatok[csapatokIndex] = csapat[i].csapat1nev;
 		csapatok[csapatokIndex + 1] = csapat[i].csapat2nev;
@@ -118,5 +119,8 @@ void foci()
 	}
 
 	ki.close();
+	delete[] csapat;
+	delete[] csapatok;
+	delete[] statisztika;
 
 }

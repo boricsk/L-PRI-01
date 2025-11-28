@@ -131,7 +131,11 @@ int kezi()
 	for (int k = 0; k < db; k++)
 	{
 		cout << jatekosNevek[k] << endl;
-	}	
+	}
+
+	delete[] csapat;
+	delete[] atlagonAluliCsapat;
+	delete[] jatekosNevek;
 
 	return 0;
 }

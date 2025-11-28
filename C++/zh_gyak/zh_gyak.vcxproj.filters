@@ -39,5 +39,8 @@
     <ClCompile Include="7konz_feladat_5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kezilabda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

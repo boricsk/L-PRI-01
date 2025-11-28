@@ -8,10 +8,10 @@ int konz7_feladat4();
 int zh_elok();
 void elm_main();
 int konz7_feladat5();
-
+int kezi();
 
 int main() {	
 	//elm_main();
-	konz7_feladat5();
+	kezi();
 	return 0;
 }

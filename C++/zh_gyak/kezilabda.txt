@@ -1,0 +1,12 @@
+Pasztor 4 34
+Kovacs 13 40
+Fekete 2 23
+Kisbuci 2 10
+Struchammerl 0 1
+Csasztuska 4 44
+Galagonya 0 12
+Fakezu 0 20
+Burgonya 10 11
+Palpusztay 3 45
+Tarfeju 2 2
+Vakhangya 0 0

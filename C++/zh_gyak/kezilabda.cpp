@@ -110,9 +110,9 @@ int kezi()
 	}
 
 	if (jatekosEllenorzesIndex != 0) {
-		cout << "A " << jatekosnev << " " << csapat[jatekosEllenorzesIndex].jatekido << " percet játszott" << endl;
+		cout << "A " << jatekosnev << " " << csapat[jatekosEllenorzesIndex].jatekido << " percet jatszott" << endl;
 	}
-	else { cout << "A jatekos nincs az adatbázisban." << endl; }
+	else { cout << "A jatekos nincs az adatbazisban." << endl; }
 
 	seged.empty();
 

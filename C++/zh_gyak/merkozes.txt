@@ -1,0 +1,6 @@
+2 3 fradi vasas
+4 0 paks gyor
+11 2 kecskemet videoton
+0 0 ftc pecs
+3 5 dvsc dvtk
+1 1 ute	kispest

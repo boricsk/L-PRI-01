@@ -9,9 +9,10 @@ int zh_elok();
 void elm_main();
 int konz7_feladat5();
 int kezi();
+void foci();
 
 int main() {	
 	//elm_main();
-	kezi();
+	foci();
 	return 0;
 }

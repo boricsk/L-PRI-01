@@ -42,5 +42,8 @@
     <ClCompile Include="kezilabda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="foci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

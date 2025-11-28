@@ -133,6 +133,7 @@
     <ClCompile Include="7konz_feladat_4.cpp" />
     <ClCompile Include="7konz_feladat_5.cpp" />
     <ClCompile Include="elmelet.cpp" />
+    <ClCompile Include="foci.cpp" />
     <ClCompile Include="kezilabda.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="zh_elok.cpp" />

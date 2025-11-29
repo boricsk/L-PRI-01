@@ -4,7 +4,7 @@ Ki: i:=0 //int
 Algoritmus
 	tömbhossz := szizeof(tomb) / sizeof(tomb[0])
 	Be: keresendo //int
-	Ciklus amíg ( i < tombhossz és tomb[i] != keresendo)
+	Ciklus amíg ( i <= tombhossz és tomb[i] != keresendo)
 		i := i + 1
 	Ciklus vége
 	Ha (i != tombhossz) akkor Kiir keresendo: Kiir i
@@ -26,10 +26,10 @@ void lin_keres()
 	cout << "Linearis kereses. " << endl;
 	cout << "Kerek egy szamot: "; cin >> keresendo;
 
-	while (i < tombhossz && tomb3[i] != keresendo) { i++; }
+	while (i <= tombhossz && tomb3[i] != keresendo) { i++; }
 
-	if (i != tombhossz) {
-		cout << "A keresett pontszam : " << keresendo << " index :" << i + 1 << endl;
+	if (i <= tombhossz) {
+		cout << "A keresett pontszam : " << keresendo << " hely :" << i + 1 << endl;
 	}
 	else {
 		cout << "Nincs ilyen pontszam!" << endl;

@@ -17,6 +17,6 @@ void rend_kozv_kiv();
 
 int main()
 {
-	rend_kozv_kiv();
+	log_kereses();
 	return 0;
 }

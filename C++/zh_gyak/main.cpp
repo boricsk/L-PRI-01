@@ -10,9 +10,10 @@ void elm_main();
 int konz7_feladat5();
 int kezi();
 void foci();
+void metszet();
 
 int main() {	
 	//elm_main();
-	foci();
+	metszet();
 	return 0;
 }

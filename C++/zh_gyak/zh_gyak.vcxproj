@@ -139,6 +139,11 @@
     <ClCompile Include="metszetkepzes.cpp" />
     <ClCompile Include="zh_elok.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="lista.txt" />
+    <Text Include="sor.txt" />
+    <Text Include="verem.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

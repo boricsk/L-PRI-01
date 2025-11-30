@@ -1,0 +1,46 @@
+Üresre állítás :
+		HOVA :=1  
+		HONNAN := 1
+Eljárás vége.
+
+SORBA(x):
+		Ha (HOVA > N ) akkor ’HIBA’			// betelt a sor , nincs már hely
+					különben 	
+						SOR[HOVA]:=x 
+						HOVA : = HOVA+1
+		Elágazás vége.
+Eljárás vége.
+
+SORBÓL(x):
+		Ha (HONNAN = HOVA) akkor HIBA 		// üres a sor, nincs mit kivenni
+						különben  	 
+							x:= S[HONNAN] 
+							HONNAN := HONNAN+1
+		Elágazás vége.
+Eljárás vége.
+
+Cikliskus sor mûveletei
+Üresre állítás :
+		HOVA :=1 : HONNAN := 1 : DB =0
+Eljárás vége.
+
+SORBA(x):
+		Ha (DB=N) 	akkor HIBA 				// betelt a sor
+					különben 	
+							SOR[HOVA]:=x 
+							HOVA : = HOVA+1
+							DB:=DB+1
+							Ha( HOVA >N) akkor HOVA:=1 
+		Elágazás vége
+Eljárás vége.
+
+
+SORBÓL(x):
+		Ha (DB=0) akkor HIBA 			// üres a sor
+				   különben   	
+						x:= SOR[HONNAN] 
+						HONNAN := HONNAN+1
+						DB:= DB-1
+						Ha( HONNAN >N)akkor HONNAN :=1  
+		Elágazás vége.	
+Eljárás vége.

@@ -1,0 +1,48 @@
+Az elsõ elem sorszámának (címének) meghatározása:
+
+	Elsõ(MUT):
+		MUT:=FEJ
+	Eljárás vége.
+
+Következõ elem sorszámának (címének) megváltoztatása:
+
+	Következõ(MUT):	
+		MUT:=KOV[MUT]
+	Eljárás vége.
+
+Új elem(X) beillesztése a listába  a K. után a fizikailag H. Helyre (ADAT [H] az érték, KOV [H] lesz a mutatója.
+
+	Új elem (K, H, X):
+		Elsõ (MUT):   I:=1
+		Ciklus, amíg I <K
+			Következõ (MUT):	I:=I+1
+		Ciklus vége.
+		KOV [H]:=KOV [MUT]
+		KOV [MUT]:=H
+		ADAT [H]:=X
+	Eljárás vége.
+
+A K. elem törlése a listából:
+
+	Törlés (K):
+		MUT:=0	:  I:=1
+		Ciklus, amíg I <K
+			Következõ (MUT)
+			I:=I+1
+		Ciklus vége
+		KOV [MUT]:=KOV [KOV [MUT]]
+	Eljárás vége.
+
+Egy  X adat keresése a listában
+
+	Keresés(X, SORSZ):
+		MUT:=0 : I:=1
+	 	Ciklus amíg I< =N és ADAT[I]<>X
+			Következõ(MUT)
+			I:=I+1
+		Ciklus vége
+		Ha( I<=N) akkor SORSZ:=I
+				különben ’nincs’ X eleme a sorozatnak
+  		Elágazás vége
+	Eljárás vége.
+

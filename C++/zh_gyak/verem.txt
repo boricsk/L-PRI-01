@@ -1,0 +1,16 @@
+Üresre állítás:
+		SP:=1
+Eljárás vége.
+
+
+VEREMBE(x) :
+	Ha ( SP >N ) 	akkor 	’HIBA’    			// betelt a verem
+					különben  S[SP]:= x 	: SP:= SP+1
+	Elágazás vége.
+Eljárás  vége.
+
+VEREMBÕL(x) :
+	Ha( SP=1) 	akkor 	’HIBA’ 				// üres a verem
+				különben SP:=SP-1 : x:=S[SP]
+	Elágazás vége.
+Eljárás vége.
